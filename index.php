@@ -26,9 +26,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            <a class="nav-link" href="#">Facultades</a>
-            <a class="nav-link" href="#">Programas</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+            <a class="nav-link" href="facultades.php">Facultades</a>
+            <a class="nav-link" href="programas.php">Programas</a>
            
         </div>
         </div>
