@@ -4,7 +4,6 @@
     $username = "root";
     $password = "";
     $dbname = "cesmag";
-    $port = "3306"
 
     // Crear conexión
     $conn = new mysqli($servername, $username, $password, $dbname);

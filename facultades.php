@@ -1,15 +1,15 @@
 <?php
-include 'index.php';
-include 'conexion.php';
+  include 'index.php';
+  include 'conexion.php';
 ?>
 <div class="container">
 
 
 <h1> Listado de facultades </h1>
-
-<div align="rigth">
-  <a class='btn btn-primary'>Adicionar</a>
+<div align="right">
+  <a class='btn btn-primary' href="form_registro_fac.php">Adicionar</a>
 </div>
+
 <table class="table">
   <thead>
     <tr>
