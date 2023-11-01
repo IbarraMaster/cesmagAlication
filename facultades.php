@@ -30,7 +30,7 @@
                 echo "<td>".$row["nombre_fac"]."</td>";
                 echo "<td>
                     <a class='btn btn-success'>Editar</a>
-                    <a class='btn btn-danger'>Eliminar</a>
+                    <a class='btn btn-danger' href='eliminarFac.php?id=".$row["codigo_fac"]."'>Eliminar</a>
                     </td>";
                 echo "</tr>";
             }
