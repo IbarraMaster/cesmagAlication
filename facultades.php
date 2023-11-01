@@ -1,25 +1,44 @@
 <?php
-    include 'index.php'
+include 'index.php';
+include 'conexion.php';
 ?>
+<div class="container">
 
-<h1>Listado de facultades</h1>
+
+<h1> Listado de facultades </h1>
+
+<div align="rigth">
+  <a class='btn btn-primary'>Adicionar</a>
+</div>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">codigo</th>
-      <th scope="col">nombre</th>
-      <th scope="col">opciones</th>
+      <th scope="col">Codigo</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Opciones</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>123</td>
-      <td>artes</td>
-      <td>
-        <a class="btn btn-success">Editar</a>
-        <a class="btn btn-danger">Eliminar</a>
-      </td>
-    </tr>
-    
+  <?php
+        $sql = "SELECT * FROM facultades";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>".$row["codigo_fac"]."</td>";
+                echo "<td>".$row["nombre_fac"]."</td>";
+                echo "<td>
+                    <a class='btn btn-success'>Editar</a>
+                    <a class='btn btn-danger'>Eliminar</a>
+                    </td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "0 resultados";
+        }
+        $conn->close();
+    ?>
   </tbody>
 </table>
+</div>
